@@ -45,6 +45,7 @@ cri <- c("La patita",
 text_df <- tibble(line = 1:4, text = text)
 cri_df <- tibble(line = 1:32, texto = cri)
 
+
 text_df %>%
   unnest_tokens(word, text)
 
@@ -72,7 +73,7 @@ tidy_books <- original_books %>%
   unnest_tokens(word, text)
 
 
-### para quitar palabras stop-words
+### para quitar palabras "stop-words"
 data(stop_words)
 
 tidy_books <- tidy_books %>%
